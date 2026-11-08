@@ -552,7 +552,8 @@ class FoodoorHandler(BaseHTTPRequestHandler):
 
         self._send_json({"error": "Not Found"}, status=404)
 
-handler = FoodoorHandler
+class handler(FoodoorHandler):
+    pass
 
 
 def run():

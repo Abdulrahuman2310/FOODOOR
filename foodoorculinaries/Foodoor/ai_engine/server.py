@@ -124,6 +124,11 @@ class AIRequestHandler(BaseHTTPRequestHandler):
         else:
             self._send_json({"error": "Endpoint not found"}, status=404)
 
+# Vercel Python runtime entrypoint
+class handler(AIRequestHandler):
+    pass
+
+
 def run():
     server_address = ('', PORT)
     httpd = HTTPServer(server_address, AIRequestHandler)
