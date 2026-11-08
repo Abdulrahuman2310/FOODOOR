@@ -552,6 +552,9 @@ class FoodoorHandler(BaseHTTPRequestHandler):
 
         self._send_json({"error": "Not Found"}, status=404)
 
+handler = FoodoorHandler
+
+
 def run():
     server = HTTPServer(('', PORT), FoodoorHandler)
     print("=" * 60)
